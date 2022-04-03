@@ -1,0 +1,475 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+body header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem;
+  position: fixed;
+  background-color: white;
+  z-index: 999;
+}
+body header .menu-list {
+  display: none;
+  list-style-type: none;
+  position: absolute;
+  background-color: hsl(270deg, 9%, 17%);
+  width: 100vw;
+  height: 90vh;
+  top: 10vh;
+  left: 0%;
+  flex-direction: column;
+  gap: 2rem;
+  background-image: url("../images/bg-pattern-mobile-nav.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+}
+body header .menu-list li {
+  text-align: center;
+}
+body header .menu-list li a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 98%);
+  font-family: "Karla", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+body header .menu-list li:first-of-type {
+  margin-top: 4rem;
+}
+body header .menu-list li:last-of-type {
+  margin-top: 1rem;
+}
+body header .menu-list li:last-of-type a {
+  border: 0.15rem hsl(0deg, 0%, 98%) solid;
+  padding: 1rem 4.5rem;
+}
+body header .menu-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: none;
+  background-image: url("../images/icon-hamburger.svg");
+  background-repeat: no-repeat;
+}
+body header .menu-btn:hover {
+  cursor: pointer;
+}
+body header .active-btn {
+  background-image: url("../images/icon-close.svg");
+}
+body .active-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1.5rem;
+  position: fixed;
+  background-color: white;
+  z-index: 999;
+}
+body .active-header .active-list {
+  display: flex;
+}
+body main .hero {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 5rem;
+}
+body main .hero .hero-img {
+  width: 100%;
+  height: 451px;
+  background-image: url("../images/image-intro-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body main .hero .hero-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-image: url("../images/bg-pattern-intro-left-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  height: 30rem;
+  background-color: hsl(256deg, 26%, 20%);
+  padding: 0 1.5rem;
+}
+body main .hero .hero-content .hero-title {
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  font-size: 2.9rem;
+  color: hsl(0deg, 0%, 98%);
+  text-align: center;
+  line-height: 2.9rem;
+}
+body main .hero .hero-content .hero-desc {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  color: hsl(216deg, 30%, 68%);
+  text-align: center;
+}
+body main .hero .hero-content .hero-btn {
+  color: hsl(0deg, 0%, 98%);
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  background: none;
+  border: 0.15rem hsl(0deg, 0%, 98%) solid;
+  padding: 1rem 2rem;
+}
+body main .hero .hero-content:after {
+  content: url("../images/bg-pattern-intro-right-mobile.svg");
+  position: absolute;
+  top: 75%;
+  right: 0;
+}
+body main .different {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 0 1.5rem;
+  margin-top: 10rem;
+  margin-bottom: 4rem;
+}
+body main .different hr {
+  width: 15rem;
+  color: hsl(256deg, 26%, 20%);
+  opacity: 0.5;
+  margin: 0 auto;
+}
+body main .different h1 {
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  font-size: 2.9rem;
+  color: hsl(270deg, 9%, 17%);
+  text-align: center;
+  line-height: 2.9rem;
+  margin: 2rem 0 4rem 0;
+}
+body main .different .different-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+body main .different .different-list .different-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+body main .different .different-list .different-item img {
+  margin-bottom: 0.5rem;
+}
+body main .different .different-list .different-item span {
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: hsl(270deg, 9%, 17%);
+  text-align: center;
+  line-height: 2.9rem;
+}
+body main .different .different-list .different-item p {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  color: hsl(216deg, 30%, 68%);
+  text-align: center;
+}
+body main .more {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 1.5rem;
+  background-color: hsl(256deg, 26%, 20%);
+  height: 25rem;
+  background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: 100% 0;
+}
+body main .more .more-title {
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: hsl(0deg, 0%, 98%);
+  text-align: center;
+  line-height: 2.5rem;
+}
+body main .more .more-btn {
+  color: hsl(0deg, 0%, 98%);
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  background: none;
+  border: 0.15rem hsl(0deg, 0%, 98%) solid;
+  padding: 1rem 2rem;
+  width: max-content;
+  margin: 0 auto;
+}
+body footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 1.5rem;
+  background-color: hsl(0deg, 0%, 98%);
+  background-image: url("../images/bg-pattern-footer-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 10rem;
+}
+body footer .footer-main-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+body footer .footer-main-link .footer-main-list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 1rem;
+}
+body footer hr {
+  width: 100%;
+  color: hsl(273deg, 4%, 51%);
+  opacity: 0.2;
+}
+body footer .company, body footer .help, body footer .contact, body footer .others {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: hsl(273deg, 4%, 51%);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+body footer .company ul, body footer .help ul, body footer .contact ul, body footer .others ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+body footer .company ul li a, body footer .help ul li a, body footer .contact ul li a, body footer .others ul li a {
+  text-decoration: none;
+  color: hsl(270deg, 9%, 17%);
+}
+
+.unscroll {
+  overflow: hidden;
+}
+
+@media (min-width: 1000px) {
+  body header {
+    padding: 2.5rem 10rem;
+  }
+  body header .menu-list {
+    display: flex;
+    list-style-type: none;
+    position: relative;
+    background-color: white;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    flex-direction: row;
+    gap: 2rem;
+    background: none;
+  }
+  body header .menu-list li {
+    text-align: center;
+  }
+  body header .menu-list li a {
+    text-decoration: none;
+    color: hsl(273deg, 4%, 51%);
+    font-family: "Karla", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+  body header .menu-list li a:hover {
+    color: hsl(270deg, 9%, 17%);
+  }
+  body header .menu-list li:first-of-type {
+    margin-top: 0;
+  }
+  body header .menu-list li:last-of-type {
+    margin-top: 0;
+  }
+  body header .menu-list li:last-of-type a {
+    border: 0.15rem hsl(270deg, 9%, 17%) solid;
+    padding: 1rem 2.5rem;
+  }
+  body header .menu-list li:last-of-type a:hover {
+    background-color: hsl(270deg, 9%, 17%);
+    color: hsl(0deg, 0%, 98%);
+  }
+  body header .menu-btn {
+    display: none;
+  }
+  body main .hero {
+    flex-direction: row-reverse;
+    position: relative;
+  }
+  body main .hero .hero-img {
+    display: none;
+  }
+  body main .hero .hero-content {
+    padding: 0 46rem 0 10rem;
+    align-items: flex-start;
+    text-align: left;
+    height: 35rem;
+    background-image: none;
+  }
+  body main .hero .hero-content .hero-title {
+    text-align: left;
+    font-size: 4.5rem;
+    line-height: 5rem;
+  }
+  body main .hero .hero-content .hero-desc {
+    text-align: left;
+  }
+  body main .hero .hero-content::before {
+    content: url("../images/bg-pattern-intro-right-desktop.svg");
+    right: 0;
+    position: absolute;
+    top: -20%;
+    z-index: 9;
+  }
+  body main .hero .hero-content::after {
+    content: url("../images/bg-pattern-intro-left-desktop.svg");
+    left: 0;
+  }
+  body main .hero .hero-content .hero-btn:hover {
+    background-color: hsl(0deg, 0%, 98%);
+    color: hsl(270deg, 9%, 17%);
+    cursor: pointer;
+  }
+  body main .hero:after {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 550px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../images/image-intro-desktop.jpg");
+    right: 15%;
+    top: 30%;
+  }
+  body main .different {
+    padding: 0 10rem;
+    align-items: flex-start;
+  }
+  body main .different h1 {
+    font-size: 4.5rem;
+    margin-bottom: 6rem;
+  }
+  body main .different hr {
+    margin: 0;
+    width: 10rem;
+    margin-bottom: 2rem;
+  }
+  body main .different .different-list {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  body main .different .different-list .different-item {
+    text-align: left;
+    align-items: flex-start;
+  }
+  body main .different .different-list .different-item span {
+    font-size: 1.75rem;
+  }
+  body main .different .different-list .different-item p {
+    text-align: left;
+  }
+  body main .more {
+    margin: 0 10rem;
+    padding: 0 5rem;
+    flex-direction: row;
+    height: 15rem;
+    background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+    background-size: contain;
+  }
+  body main .more .more-title {
+    text-align: left;
+    font-size: 4rem;
+    line-height: 4rem;
+    width: 59%;
+  }
+  body main .more .more-btn:hover {
+    background-color: hsl(0deg, 0%, 98%);
+    color: hsl(270deg, 9%, 17%);
+    cursor: pointer;
+  }
+  body footer {
+    padding: 5rem 10rem;
+    background-image: url("../images/bg-pattern-footer-desktop.svg");
+    background-size: 35%;
+  }
+  body footer .footer-main-link {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  body footer div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  body footer div .company, body footer div .contact, body footer div .others, body footer div .help {
+    align-items: flex-start;
+  }
+  body footer div .company ul, body footer div .contact ul, body footer div .others ul, body footer div .help ul {
+    align-items: flex-start;
+  }
+  body footer div .company ul li a:hover, body footer div .contact ul li a:hover, body footer div .others ul li a:hover, body footer div .help ul li a:hover {
+    text-decoration: underline;
+  }
+}
+@media (min-width: 700px) {
+  body main .hero .hero-img {
+    background-position-y: 30%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

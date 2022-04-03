@@ -1,0 +1,565 @@
+//Colors
+//Primary
+$dark-violet: hsl(256, 26%, 20%);
+$grayish-blue: hsl(216, 30%, 68%);
+
+//Neutral
+$very-dark-violet: hsl(270, 9%, 17%);
+$dark-grayish-violet: hsl(273, 4%, 51%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+//Fonts
+$headings: "DM Serif Display", sans-serif;
+$headings-weight: 400;
+$body: "Karla", sans-serif;
+$body-weight1: 400;
+$body-weight2: 700;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        //margin: 0 auto;
+        //width: 85%;
+        width: 100%;
+        padding: 1.5rem;
+        //padding: 1.5rem 0;
+        position: fixed;
+        //position: relative;
+        background-color: white;
+        z-index: 999;
+        .menu-list{
+            display: none;
+            list-style-type: none;
+            position: absolute;
+            background-color: $very-dark-violet;
+            width: 100vw;
+            height: 90vh;
+            top: 10vh;
+            left: 0%;
+            
+            flex-direction: column;
+            gap: 2rem;
+            background-image: url("../images/bg-pattern-mobile-nav.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 0 100%;
+            li{
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    color: $very-light-gray;
+                    font-family: $body;
+                    font-size: 1.5rem;
+                    font-weight: $body-weight2;
+                    letter-spacing: .2rem;
+                    text-transform: uppercase;
+                }
+
+                &:first-of-type{
+                    margin-top: 4rem;
+                }
+
+                &:last-of-type{
+                    margin-top: 1rem;
+                    a{
+                        border: .15rem $very-light-gray solid;
+                        padding: 1rem 4.5rem;
+                    }
+
+                    
+                }
+            }
+        }
+
+        .menu-btn{
+            width: 32px;
+            height: 32px;
+            border: none;
+            background-color: none;
+            background-image: url("../images/icon-hamburger.svg");
+            background-repeat: no-repeat;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+        .active-btn{
+            background-image: url("../images/icon-close.svg");
+        }
+    }
+
+    .active-header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 100%;
+        padding: 1.5rem;
+        position: fixed;
+        background-color: white;
+        z-index: 999;
+
+        .active-list{
+            display: flex;
+        }
+    }
+
+    main{
+        .hero{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding-top: 5rem;
+            
+            .hero-img{
+                width: 100%;
+                height: 451px;
+                background-image: url("../images/image-intro-mobile.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .hero-content{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                background-image: url("../images/bg-pattern-intro-left-mobile.svg");
+                background-repeat: no-repeat;
+                background-size: 50%;
+                height: 30rem;
+                background-color: $dark-violet;
+                padding: 0 1.5rem;
+                .hero-title{
+                    font-family: $headings;
+                    font-weight: $headings-weight;
+                    font-size: 2.9rem;
+                    color: $very-light-gray;
+                    text-align: center;
+                    line-height: 2.9rem;
+                }
+
+                .hero-desc{
+                    font-family: $body;
+                    font-size: 1rem;
+                    color: $grayish-blue;
+                    text-align: center;
+                }
+
+                .hero-btn{
+                    color: $very-light-gray;
+                    font-family: $body;
+                    font-size: 1rem;
+                    font-weight: $body-weight2;
+                    letter-spacing: .1rem;
+                    text-transform: uppercase;
+                    background: none;
+                    border: .15rem $very-light-gray solid;
+                    padding: 1rem 2rem;
+                }
+
+                &:after{
+                    content: url("../images/bg-pattern-intro-right-mobile.svg");
+                    position: absolute;
+                    top: 75%;
+                    right: 0;
+                }
+            }
+        }
+
+        .different{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            padding: 0 1.5rem;
+            margin-top: 10rem;
+            margin-bottom: 4rem;
+            hr{
+                width: 15rem;
+                color: $dark-violet;
+                opacity: .5;
+                margin: 0 auto;
+            }
+            h1{
+                font-family: $headings;
+                font-weight: $headings-weight;
+                font-size: 2.9rem;
+                color: $very-dark-violet;
+                text-align: center;
+                line-height: 2.9rem;
+                margin: 2rem 0 4rem 0;
+            }
+
+            .different-list{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 4rem;
+                .different-item{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+
+                    img{
+                        margin-bottom: .5rem;
+                    }
+
+                    span{
+                        font-family: $headings;
+                        font-weight: $headings-weight;
+                        font-size: 1.5rem;
+                        color: $very-dark-violet;
+                        text-align: center;
+                        line-height: 2.9rem;
+                    }
+                    
+                    p{
+                        font-family: $body;
+                        font-size: 1rem;
+                        color: $grayish-blue;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .more{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin: 0 1.5rem;
+            background-color: $dark-violet;
+            height: 25rem;
+            background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+            background-repeat: no-repeat;
+            background-size: 60%;
+            background-position: 100% 0;
+            .more-title{
+                font-family: $headings;
+                font-weight: $headings-weight;
+                font-size: 2.5rem;
+                color: $very-light-gray;
+                text-align: center;
+                line-height: 2.5rem;
+            }
+
+            .more-btn{
+                color: $very-light-gray;
+                font-family: $body;
+                font-size: 1rem;
+                font-weight: $body-weight2;
+                letter-spacing: .1rem;
+                text-transform: uppercase;
+                background: none;
+                border: .15rem $very-light-gray solid;
+                padding: 1rem 2rem;
+                width: max-content;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5rem 1.5rem;
+        background-color: $very-light-gray;
+        background-image: url("../images/bg-pattern-footer-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-top: 10rem;
+        .footer-main-link{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            .footer-main-list{
+                display: flex;
+                flex-direction: row;
+                list-style-type: none;
+                gap: 1rem;
+            }
+        }
+
+        hr{
+            width: 100%;
+            color: $dark-grayish-violet;
+            opacity: .2;
+        }
+
+        .company, .help, .contact, .others{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: $body;
+            font-weight: $body-weight2;
+            text-transform: uppercase;
+            color: $dark-grayish-violet;
+            gap: 2rem;
+            margin-top: 2rem;
+            ul{
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                li{
+                    a{
+                        text-decoration: none;
+                        color: $very-dark-violet;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.unscroll{
+    overflow: hidden;
+}
+
+@media (min-width:1000px){
+    body{
+        header{
+            padding: 2.5rem 10rem;
+            .menu-list{
+                display: flex;
+                list-style-type: none;
+                position: relative;
+                background-color: white;
+                width: auto;
+                height: auto;
+                top: 0;
+                left: 0;
+                
+                flex-direction: row;
+                gap: 2rem;
+                background: none;
+                li{
+                    text-align: center;
+                    a{
+                        text-decoration: none;
+                        color: $dark-grayish-violet;
+                        font-family: $body;
+                        font-size: 1rem;
+                        font-weight: $body-weight2;
+                        letter-spacing: .1rem;
+                        text-transform: uppercase;
+
+                        &:hover{
+                            color: $very-dark-violet;
+                        }
+                    }
+    
+                    &:first-of-type{
+                        margin-top: 0;
+                    }
+    
+                    &:last-of-type{
+                        margin-top: 0;
+                        a{
+                            border: .15rem $very-dark-violet solid;
+                            padding: 1rem 2.5rem;
+                            &:hover{
+                                background-color: $very-dark-violet;
+                                color: $very-light-gray;
+                               
+                            }
+                        }
+
+                        
+                    }
+                }
+            }
+            .menu-btn{
+                display: none;
+            }
+        }
+
+        main{
+            .hero{
+                flex-direction: row-reverse;
+                position: relative;
+                
+                .hero-img{
+                    display: none;
+                }
+
+                .hero-content{
+                    padding: 0 46rem 0 10rem;
+                    align-items: flex-start;
+                    text-align: left;
+                    height: 35rem;
+                    background-image: none;
+                    .hero-title{
+                        text-align: left;
+                        font-size: 4.5rem;
+                        line-height: 5rem;
+                    }
+                    .hero-desc{
+                        text-align: left;
+                    }
+
+                    &::before{
+                        content: url("../images/bg-pattern-intro-right-desktop.svg");
+                        right: 0;
+                        position: absolute;
+                        top: -20%;
+                        z-index: 9;
+                    }
+                    &::after{
+                        content: url("../images/bg-pattern-intro-left-desktop.svg");
+                        left: 0;
+                    }
+
+                    .hero-btn{
+                        &:hover{
+                            background-color: $very-light-gray;
+                            color: $very-dark-violet;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                &:after{
+                    content: "";
+                    position: absolute;
+                    width: 450px;
+                    height: 550px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-image: url("../images/image-intro-desktop.jpg");
+                    right: 15%;
+                    top: 30%;
+                }
+            }
+
+            .different{
+                padding: 0 10rem;
+                align-items: flex-start;
+
+                h1{
+                    font-size: 4.5rem;
+                    margin-bottom: 6rem;
+                }
+                hr{
+                    margin: 0;
+                    width: 10rem;
+                    margin-bottom: 2rem;
+                }
+
+                .different-list{
+                    flex-direction: row;
+                    align-items: flex-start;
+                    .different-item{
+                        text-align: left;
+                        align-items: flex-start;
+
+                        span{
+                            font-size: 1.75rem;
+                        }
+                        p{
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+
+            .more{
+                margin: 0 10rem;
+                padding: 0 5rem;
+                flex-direction: row;
+                height: 15rem;
+                background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+                background-size: contain;
+                .more-title{
+                    text-align: left;
+                    font-size: 4rem;
+                    line-height: 4rem;
+                    width: 59%;
+                }
+
+                .more-btn{
+                    &:hover{
+                        background-color: $very-light-gray;
+                        color: $very-dark-violet;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        footer{
+            padding: 5rem 10rem;
+            background-image: url("../images/bg-pattern-footer-desktop.svg");
+            background-size: 35%;
+            .footer-main-link{
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            div{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                gap: 2rem;
+                align-items: flex-start;
+
+                .company, .contact, .others, .help{
+                    align-items: flex-start;
+                    ul{
+                        align-items: flex-start;
+                        li{
+                            a{
+                               &:hover{
+                                   text-decoration: underline;
+                               }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:700px){
+    body{
+        main{
+            .hero{
+                .hero-img{
+                    background-position-y: 30%;
+                }
+            }
+        }
+    }
+}
